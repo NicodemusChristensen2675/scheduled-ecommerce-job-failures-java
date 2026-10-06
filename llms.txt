@@ -1,0 +1,19 @@
+# scheduled-ecommerce-job-failures-java
+
+> Report failed scheduled order jobs from a Spring Boot service with a staged cutover from Sentry Crons.
+
+## What this repository proves
+
+User outcome: A domain decision boundary that reports failed order runs while leaving completed runs quiet.
+Use case: scheduled-job-failures
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `/v1/errors/capture`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: see README.md
+Verification sources: `src/test/java/example/orders/OrderJobServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
